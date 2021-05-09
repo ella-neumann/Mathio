@@ -16,12 +16,12 @@ body {
 /* Basic */
 
 a {
-	color: #3CF;
+	color: rgb(51, 65, 255);
     text-decoration: none;
 }
 
 a:hover {
-	color: #FC3;
+	color: rgb(112, 51, 255);
     text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ p {
 .section-heading h2:before {
     width: 1px;
     height: 100px;
-    background-color: rgba(250,250,250,0.1);
+    background-color: #2795b3;
     position: absolute;
     top: -102px;
     content: '';
@@ -62,14 +62,14 @@ p {
     letter-spacing: 0.5px;
     display: inline-block;
     padding: 15px 20px;
-    border: 2px solid rgba(250,250,250,0.1);
+    border: 2px solid     background-color: #2795b3;
 }
 
 
 /* Buttons */
 
 .main-button a {
-    background-color: #f5a425;
+    background-color: rgb(112, 51, 255);
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -115,7 +115,7 @@ a.menu-link { display: none; }
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(250,250,250,0.25);
-    background-color: rgba(22,34,57,0.99);
+    background-color: rgba(3, 85, 94, 0.99);
   }
   nav[role="navigation"] li a {
     display: block;
@@ -130,7 +130,7 @@ a.menu-link { display: none; }
   }
   nav[role="navigation"] li:hover a,
   nav[role="navigation"] li.active a {
-      color: #f5a425;
+      color: rgb(112, 51, 255);
   }
   
   @media screen and (min-width: 951px) {
@@ -165,8 +165,8 @@ a.menu-link { display: none; }
 }
 
 .main-header {
-    background-color: rgba(22,34,57,0.95);
-    height: 80px;
+    background-color: #0aa286;
+    height: 90px;
     position: fixed;
     z-index: 12;
     width: 100%;
@@ -187,7 +187,7 @@ a.menu-link { display: none; }
 }
 .main-header .logo a em {
     font-style: normal;
-    color: #f5a425;
+    color: #fff;
 }
 
 .main-menu {
@@ -247,7 +247,7 @@ a.menu-link { display: none; }
     margin-left: 0px;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #121b2f;
+    border-bottom: 1px solid #0e6d87;
 }
 
 .main-menu li .sub-menu li:first-child {
@@ -269,13 +269,13 @@ a.menu-link { display: none; }
 }
 
 .main-menu li .sub-menu li a:hover {
-    color: #f5a425;
+    color: rgb(112, 51, 255);
     border: none;
 }
 
 .main-nav li:hover a,
 .main-nav li.active a {
-    border: 2px solid #f5a425;
+    border: 2px solid rgb(112, 51, 255);
 }
 
 @media (max-width: 950px) {
@@ -311,7 +311,8 @@ a.menu-link { display: none; }
 
 .video-overlay {
     position: absolute;
-    background-color: rgba(22,34,57,0.85);
+    background-image: url(../images/pencils.jpg);
+    background-color: #2795b3;
     top: 0;
     left: 0;
     bottom: 7px;
@@ -332,7 +333,7 @@ a.menu-link { display: none; }
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
+  color: #0aa286;
   letter-spacing: 1px;
 }
 
@@ -342,13 +343,13 @@ a.menu-link { display: none; }
   font-size: 64px;
   text-transform: uppercase;
   font-weight: 800;
-  color: #fff;
+  color: #0aa286;
   letter-spacing: 1px;
 }
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #f5a425;
+  color: rgb(112, 51, 255);
   font-weight: 900;
 }
 
@@ -408,7 +409,7 @@ section.features .col-4 {
 }
 
 .features-content:hover {
-    background-color: #f5a425;
+    background-color: rgb(112, 51, 255);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
 }
 
@@ -490,7 +491,7 @@ section.features .col-4 {
 /* Why Choosing Us */
 
 section.why-us {
-    background-image: url(../images/choosing-bg.jpg);
+    background-image: url(../images/math_sheep.jpg);
     background-color: #172238;
     background-repeat: no-repeat;
     background-size: cover;
@@ -524,7 +525,7 @@ section.why-us {
 }
 #tabs ul li a {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
@@ -565,15 +566,15 @@ section.why-us {
 #tabs ul .ui-tabs-active {
 }
 #tabs ul .ui-tabs-active a {
-  color: #f5a425;
+  color: rgb(112, 51, 255);
 }
 #tabs ul .ui-tabs-active a:after {
-  background-color: #f5a425;
+  background-color: rgb(112, 51, 255);
   width: 15px;
   height: 15px;
 }
 #tabs ul .ui-tabs-active a:before {
-  border-color: #f5a425;
+  border-color: rgb(112, 51, 255);
 }
 #tabs h4 {
     margin-top: 60px;
@@ -642,7 +643,7 @@ section.coming-soon .continer h4 {
 }
 section.coming-soon .continer h4 em {
     font-style: normal;
-    color: #f5a425;
+    color: rgb(112, 51, 255);
 }
 
 @media screen and (max-width: 767px) {
@@ -705,7 +706,7 @@ section.coming-soon .continer .counter .seconds .value {
 section.coming-soon .continer .counter span {
     font-size: 18px;
     text-transform: uppercase;
-    color: #f5a425;
+    color: rgb(112, 51, 255);
     font-weight: 500;
     letter-spacing: 1px;
     margin-top: 0px;
@@ -777,7 +778,7 @@ section.coming-soon form input::placeholder { color: #fff; }
 
 section.coming-soon form button {
     margin-top: 10px;
-    background-color: #f5a425;
+    background-color: rgb(112, 51, 255);
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -795,7 +796,7 @@ section.coming-soon form button {
 /* Courses */
 
 section.courses {
-    background-image: url(../images/choosing-bg.jpg);
+    background-image: url(../images/yellow.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
@@ -885,7 +886,7 @@ section.courses .owl-carousel button.active {
 /* Video */
 
 section.video {
-    background-image: url(../images/video-bg.jpg);
+    background-image: url(../images/students.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
@@ -1501,7 +1502,9 @@ section.contact form textarea:focus {
     border: none;
     box-shadow: none;
     color: #fff;
-    background-color: rgba(250,250,250,0.1);
+    background-color: rgba(39, 105, 101, 0.1);
+    max-width: 500px;
+    margin: auto;
 }
 
 section.contact form::placeholder { color: #fff }
@@ -1513,7 +1516,7 @@ section.contact form textarea::placeholder { color: #fff; }
 section.contact form textarea::placeholder { color: #fff; }
 
 section.contact form button {
-    background-color: #f5a425;
+    background-color: #2795b3;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
