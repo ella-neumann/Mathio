@@ -914,7 +914,7 @@ section.video .left-content h4 {
 }
 section.video .left-content h4 em {
     font-style: normal;
-    color: #f5a425;
+    color: #0aa286;
 }
 
 section.video .left-content .main-button {
@@ -959,7 +959,7 @@ section.video .left-content .main-button {
   margin-top: -32.5px;
   margin-left: -32.5px;
   border-radius: 50%;
-  background-color: #f5a425;
+  background-color: #0aa286;
   z-index: 10;
 }
 .video-item figure a:after {
@@ -975,7 +975,7 @@ section.video .left-content .main-button {
   z-index: 10;
 }
 .video-item figure a:hover:before {
-  background-color: #f5a425;
+  background-color:#0aa286;
 }
 
 .video-item .video-caption {
@@ -1548,7 +1548,7 @@ footer p {
 
 footer p a,
 footer p a:hover {
-    color: #f5a425;
+    color: #0aa286;
 }
 
 @media screen and (max-width: 992px) {
