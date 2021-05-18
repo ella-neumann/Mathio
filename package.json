@@ -1,0 +1,27 @@
+{
+  "name": "Mathio",
+  "version": "1.0.0",
+  "description": "3rd and 4th grade math learning tool",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ella-neumann/Mathio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ella-neumann/Mathio/issues"
+  },
+  "homepage": "https://github.com/ella-neumann/Mathio#readme"
+}
