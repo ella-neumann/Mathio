@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
-    <link rel="stylesheet" href="assets/css/studentlogin.css" />
+    <link rel="stylesheet" href="assets/css/signup.css" />
   </head>
   <body>
     <!--header-->
@@ -53,21 +53,55 @@
 
     <!-- ***** Login Box Start ***** -->
     <div class="loginbox">
-      <h1>Welcome to Mathio!</h1>
-      <h3>To get started, please enter your login information.</h3>
+      <h1>Sign up for Mathio!</h1>
       <form action="">
-        <div>
-          <label for="email">Email</label>
-          <input type="email" name="email" required/>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">School</span>
+            <input type="text" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm password</span>
+            <input type="password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Class Code</span>
+            <input type="text" required>
+          </div>
         </div>
-        <div>
-          <label for="password">Password </label>
-          <input type="password" name="password" required />
+        <div class="st-or-t">
+          <input type="radio" name="Type" id="dot-1" checked>
+          <input type="radio" name="Type" id="dot-2">
+          <span class="title_type">I am a:</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="type">Student</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="type">Teacher</span>
+            </label>
+          </div>
         </div>
-        <button type="submit">Submit</button>
-        <div>
-          <a href="#">Lost your password?</a><br>
-          <a href="#">Don't have an account?</a>
+        <div class="button">
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
