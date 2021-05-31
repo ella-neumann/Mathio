@@ -10,7 +10,7 @@ var margin = {
 var radians = 0.0174532925;
 
 var r = 200;
-
+// How far out the second labels and hour labels are (second radius, hour radius)
 var secR = r + 16;
 var hourR = r - 40;
 
@@ -82,7 +82,7 @@ face.append('circle')
 		cy: 0,
 		fill: '#0aa286'
 	});
-
+//Sets up hash marks for second
 face.selectAll('.second')
 	.data(d3.range(0, 60))
 .enter().append('line')
@@ -96,7 +96,7 @@ face.selectAll('.second')
 			return 'rotate(' + minuteScale(d) + ')';
 		}
 	});
-
+//Sets up labels for seconds
 face.selectAll('.second-label')
 	.data(d3.range(5,61,5))
 .enter().append('text')
@@ -112,7 +112,7 @@ face.selectAll('.second-label')
 		},
 		fill: 'white'
 	});
-
+//Sets up hour hash marks
 face.selectAll('.hour')
 	.data(d3.range(0, 12))
 .enter().append('line')
@@ -126,7 +126,7 @@ face.selectAll('.hour')
 			return 'rotate(' + hourScale(d) + ')';
 		}
 	});
-
+//Sets up hour labels
 face.selectAll('.hour-label')
 	.data(d3.range(3, 13, 3))
 .enter().append('text')
@@ -178,15 +178,15 @@ function dragstart() {
 
 function drag() {
 	
-	var rad = Math.atan2(d3.event.y, d3.event.x);
+	var rad = Math.atan2(d3.event.y, d3.event.x); // This gives us theta (angle of the clock hand in radians)
 	
 	d3.select(this)
 		.attr({
 			x2: function(d) {
-				return r * Math.cos(rad);
+				return r * Math.cos(rad);  //calculating x coordinate (where endpoint of hand not at 0,0 is on clock)
 			},
-			y2: function(d) {
-				return r * Math.sin(rad);
+			y2: function(d) {                       
+				return r * Math.sin(rad);   //calculating y coordinate (where endpoint of hand not at 0,0 is on clock)
 			}
 		});
 }
