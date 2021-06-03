@@ -214,12 +214,14 @@ function getnum(t,r) {
 		n = (1-(n*-1))+1
 	}
 	n = n+0.5
+	// hour hand
 	if(t== 'h') {
 		if(n>(2+(1/6))){
 			n=n-2;
 		}
 		n = Math.floor(n*6);
 	}
+	// minute hand
 	else if(t == 'm'){
 		if(n>=2){
 			n=n-2;
