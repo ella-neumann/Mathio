@@ -17,6 +17,8 @@ var hourR = r - 40;
 var hourHandLength = 2 * r/3;
 var minuteHandLength = r;
 var secondHandLength = r - 12;
+var h=12; // Stores the hour value (1-12) ex: if clock is set to 12:55, will store 12
+var m=0;  // Stores the minute value (0-59) ex: if clock is set to 12:55, will store 55
 
 var w = d3.select('figure').node().clientWidth - margin.left - margin.right;
 var h = d3.select('figure').node().clientHeight - margin.top - margin.bottom;
@@ -47,19 +49,20 @@ var handData = [
 		length:-minuteHandLength,
 		scale:minuteScale
 	},
-	{
+	/*{
 		type:'second',
 		value:0,
 		length:-secondHandLength,
 		scale:secondScale
-	}
+	}*/
 ];
+
 
 function updateData(){
 	var t = new Date();
 	handData[0].value = (t.getHours() % 12) + t.getMinutes()/60 ;
 	handData[1].value = t.getMinutes();
-	handData[2].value = t.getSeconds();
+	//handData[2].value = t.getSeconds();
 }
 
 updateData();
@@ -153,13 +156,10 @@ hands.selectAll('line')
 		class: function(d) { return d.type + '-hand'; },
 		x1: 0,
 		y1: 0,
-		x2: function(d) {
-			return d.length * Math.cos(d.value);
-		},
-		y2: function(d) {
-			return d.length * Math.sin(d.value);
-		}
+		x2: 0,
+		y2: -r
 	})
+	
 	.call(drag);
 
 // small circle in middle to cover hands
@@ -189,7 +189,45 @@ function drag() {
 				return r * Math.sin(rad);   //calculating y coordinate (where endpoint of hand not at 0,0 is on clock)
 			}
 		});
+	
+	var t;
+	if(Object.values(d3.select(this).data()[0])[0] == 'hour') {
+		t="h";
+		
+		h = getnum(t,rad);
+		//console.log("hour: "+h);
+	}
+	else {
+		t="m";
+		m = getnum(t,rad);
+		//console.log("minute: "+m)
+	}
 }
 
 function dragend() {
+	
+}
+//Returns the numeric value the clock is pointing to
+function getnum(t,r) {
+	var n = r/Math.PI
+	if(n < 0){
+		n = (1-(n*-1))+1
+	}
+	n = n+0.5
+	if(t== 'h') {
+		if(n>(2+(1/6))){
+			n=n-2;
+		}
+		n = Math.floor(n*6);
+	}
+	else if(t == 'm'){
+		if(n>=2){
+			n=n-2;
+		}
+		n=Math.round(n*30);
+		if(n==60){
+			n=0
+		}
+	}
+	return n;
 }
