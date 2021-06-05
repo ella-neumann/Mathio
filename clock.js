@@ -23,7 +23,7 @@ var m=0;  // Stores the minute value (0-59) ex: if clock is set to 12:55, will s
 var w = d3.select('figure').node().clientWidth - margin.left - margin.right;
 var h = d3.select('figure').node().clientHeight - margin.top - margin.bottom;
 
-var minuteScale = secondScale = d3.scale.linear()
+var minuteScale = d3.scale.linear()
 	.range([0,354])
 	.domain([0,59]);
 
@@ -85,7 +85,7 @@ face.append('circle')
 		cy: 0,
 		fill: '#0aa286'
 	});
-//Sets up hash marks for second
+//Sets up hash marks for minute
 face.selectAll('.second')
 	.data(d3.range(0, 60))
 .enter().append('line')
@@ -100,18 +100,18 @@ face.selectAll('.second')
 		}
 	});
 //Sets up labels for seconds
-face.selectAll('.second-label')
+face.selectAll('.minute-label')
 	.data(d3.range(5,61,5))
 .enter().append('text')
-	.classed('.second-label', true)
+	.classed('.minute-label', true)
 	.text(function(d) { return d; })
 	.attr({
 		'text-anchor': 'middle',
 		x: function(d) {
-			return secR * Math.sin(secondScale(d) * radians);
+			return secR * Math.sin(minuteScale(d) * radians);
 		},
 		y: function(d) {
-			return -secR * Math.cos(secondScale(d) * radians) + 8;
+			return -secR * Math.cos(minuteScale(d) * radians) + 8;
 		},
 		fill: 'white'
 	});
